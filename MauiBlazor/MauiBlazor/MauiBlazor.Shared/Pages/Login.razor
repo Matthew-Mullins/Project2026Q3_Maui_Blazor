@@ -1,0 +1,27 @@
+﻿@page "/login"
+@using MauiBlazor.Shared.DTOs
+
+<div class="w-100 h-100 flex justify-content-center align-items-center">
+    <div class="shadow rounded p-5">
+        <EditForm Model="_loginModel">
+            <DataAnnotationsValidator/>
+            <div class="">
+                <label>Username</label>
+                <InputText @bind-Value="_loginModel.Username" class="" placeholder="Enter Username"/>
+            </div>
+            <div class="">
+                <label>Password</label>
+                <InputText @bind-Value="_loginModel.Password" type="password" class=""/>
+            </div>
+            <div class="">
+                <button type="submit" class="">Login</button>
+                <hr/>
+                <NavLink href="register" class="">Don't have an account? Register here.</NavLink>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    private LoginModel _loginModel = new();
+}

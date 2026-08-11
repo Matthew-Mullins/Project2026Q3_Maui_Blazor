@@ -1,5 +1,7 @@
 <Solution>
   <Project Path="MauiBlazor/MauiBlazor.Shared/MauiBlazor.Shared.csproj" />
   <Project Path="MauiBlazor/MauiBlazor.Web/MauiBlazor.Web.csproj" />
-  <Project Path="MauiBlazor/MauiBlazor/MauiBlazor.csproj" />
+  <Project Path="MauiBlazor/MauiBlazor/MauiBlazor.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
 </Solution>
