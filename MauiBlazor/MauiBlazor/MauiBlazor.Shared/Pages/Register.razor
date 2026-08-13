@@ -1,6 +1,31 @@
 ﻿@page "/register"
-<h3>Register</h3>
+@using MauiBlazor.Shared.DTOs
+
+<div class="w-100 h-100 flex justify-content-center align-items-center">
+    <div class="shadow rounded p-5">
+        <EditForm Model="_registerModel">
+            <DataAnnotationsValidator />
+            <div class="">
+                <label>Name</label>
+                <InputText @bind-Value="_registerModel.Name" class="" placeholder="Enter Name" />
+            </div>
+            <div class="">
+                <label>Username</label>
+                <InputText @bind-Value="_registerModel.Email" class="" placeholder="Enter Email Address" />
+            </div>
+            <div class="">
+                <label>Password</label>
+                <InputText @bind-Value="_registerModel.Password" type="password" class="" />
+            </div>
+            <div class="">
+                <button type="submit" class="">Register</button>
+                <hr />
+                <NavLink href="login" class="">Existing user? Login here.</NavLink>
+            </div>
+        </EditForm>
+    </div>
+</div>
 
 @code {
-
+    private RegisterModel _registerModel = new();
 }
